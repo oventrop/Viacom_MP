@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MySuite">
-	<test name="FirefoxTest">
-		<classes>
-			<class name="by.epam.pm.Simple" />
-		</classes>
-	</test>
+    <listeners>
+        <listener class-name="by.epam.pm.Listener"/>
+    </listeners>
+    <test name="TutTest">
+        <parameter name="URL" value="https://www.tut.by"/>
+            <groups>
+            <run>
+                <include name="independentTests1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="by.epam.pm.IndependentTests"/>
+        </classes>
+    </test>
+    <test name="YandexTest">
+        <parameter name="URL" value="https://yandex.by"/>
+        <groups>
+            <run>
+                <include name="independentTests1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="by.epam.pm.IndependentTests"/>
+        </classes>
+    </test>
+    <test name="OtherTests">
+          <groups>
+            <run>
+                <include name="independentTests2"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="by.epam.pm.IndependentTests"/>
+        </classes>
+    </test>
 </suite>
