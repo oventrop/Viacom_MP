@@ -3,6 +3,7 @@
 <suite name="MySuite">
     <listeners>
         <listener class-name="by.epam.pm.Listener"/>
+        <listener class-name="by.epam.pm.RetryListener"/>
     </listeners>
     <test name="TutTest">
         <parameter name="URL" value="https://www.tut.by"/>

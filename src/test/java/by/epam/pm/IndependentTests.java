@@ -37,7 +37,7 @@ public class IndependentTests {
 
     @Parameters({"URL"})
     @Test(description = "parameterized", groups = "independentTests1", alwaysRun = true)
-    public void parameterisedTest(String URL) throws InterruptedException {
+    public void parameterizedTest(String URL) throws InterruptedException {
         driver.get(URL);
         System.out.println(driver.getCurrentUrl());
         Assert.assertTrue(driver.getCurrentUrl().equals(URL), "You opened not a " + URL + " page!");

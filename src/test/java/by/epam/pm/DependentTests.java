@@ -12,11 +12,6 @@ import org.testng.annotations.Test;
 
 public class DependentTests {
 
-    public DependentTests(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
-
     WebDriver driver;
 
     private static final String LOGIN_FIELD = "login_field";
@@ -25,6 +20,10 @@ public class DependentTests {
     String login;
     String password;
 
+    public DependentTests(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
 
     @BeforeClass(description = "Start execution")
     public void startTest() {

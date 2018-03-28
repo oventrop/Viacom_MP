@@ -14,7 +14,7 @@ public class Listener implements ITestListener, ISuiteListener {
     }
 
     public void onTestStart(ITestResult result) {
-        System.out.println("Test " + result.getTestClass().getName() + " "result.getName() + " started!");
+        System.out.println("Test " + result.getTestClass().getName() + " " + result.getName() + " started!");
     }
 
     public void onTestSuccess(ITestResult result) {
